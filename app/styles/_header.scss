@@ -1,0 +1,114 @@
+.bbmain{
+	.bb-header{
+		.bb-header-social-icons-div{
+			background: $headermenu-social-icons-background;
+			padding-left:15px;
+			.bb-facebook-icon:hover{
+				background:$bb-facebook-icon-hover-color;
+			}
+			.bb-google-plus-square:hover{
+				background: $bb-google-plus-hover-color;
+			}
+			.bb-twitter:hover{
+				background: $bb-twitter-hover-color;
+			}
+			.bb-youtube-square:hover{
+				background: $bb-youtube-hover-color;
+			}
+		}
+		.bb-header-social-icons-div i{
+			padding: 7px 8px;
+			cursor: pointer;
+			color:$white-color;
+		}
+		.bb-search-icon:hover{
+			background: $headermenu-item-border-bottom-color; 
+		}
+		.bb-search{
+			min-height: 40px;
+			border: none !important;
+		}
+		.bb-search:focus{
+			border: none;
+		}
+		.bb-header-section-2{
+		  min-height: 200px;
+		  padding: 25px;
+	      background-color:$header-background;
+		}
+		.bb-header-menu-items{
+			background: $headermenu-background;
+			ul{
+				list-style-type: none;
+			}
+			ul li{
+				border-bottom: 3px solid $headermenu-background;
+				padding:20px 10px 15px 10px;
+				display:inline-block;
+				font-size: 1.2em;
+				cursor: pointer;
+			}
+			ul li a{
+				color:$white-color !important;
+				text-decoration: none !important;
+			}
+			ul li:hover, ul li:active, .active-menu-item{
+				background: $headermenu-bg-hover-color;
+ 				border-bottom: 3px solid $headermenu-item-border-bottom-color;
+			}
+			ul li a:hover, ul li a:active{
+				text-decoration: none !important;
+			}
+		}
+	}
+	.bb-content{
+	}
+	.bb-footer{
+	}
+}
+/**/
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+	.bbmain{
+		.bb-header{
+		}
+		.bb-content{
+		}
+		.bb-footer{
+		}
+	}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 992px) {
+	.bbmain{
+		.bb-header{
+		}
+		.bb-content{
+		}
+		.bb-footer{
+		}
+	}
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.bbmain{
+		.bb-header{
+		}
+		.bb-content{
+		}
+		.bb-footer{
+		}
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.bbmain{
+		.bb-header{
+		}
+		.bb-content{
+		}
+		.bb-footer{
+		}
+	}
+}

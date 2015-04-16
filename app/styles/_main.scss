@@ -1,0 +1,777 @@
+.dsui{
+  .dsui-header{   
+  }
+  .dsui-content{
+    .dsui-dci-pay{
+      .dsui-pay-bottom-modal{
+        margin-bottom: 60px;
+        /* Select-payment-method- css */
+        .dsui-select-payment-method{
+          line-height:1.2;
+          border:1px solid $light-gray-color;
+          .dsui-order-total{
+            border-right: 1px solid $light-gray-color;
+            height:127px;
+            color: $dark-gray-color;
+              padding:0px;
+            
+            .dsui-price-decimal{
+              font-size: 2.5em;
+              font-family: $roboto-light;
+              color:$dark-slate-gray-color;
+            }
+            .dsui-price{
+              color:$dark-slate-gray-color;
+              font-size: 40px;
+              font-family: $roboto-light;
+            }
+          }
+          .dsui-payment-duedate{
+            border-right: 1px solid $light-gray-color;
+            height:128px;
+            color: $dark-gray-color;
+            .dsui-duedate-text{
+              color:$dark-slate-gray-color;
+              font-size: 40px;
+              font-family: $roboto-light;
+            }
+            .dsui-past-transactions .popover{
+              max-width: none !important;
+              background: $dark-gray-color;
+              width: 850px;
+            }
+            .dsui-past-transactions{
+              margin-top:32px;
+              a{
+                color : $dark-slate-gray-color;
+                text-decoration: none;
+              }
+              .dsui-past-transaction-plusicon{
+                height:16px;
+                width:16px;
+                margin-top: 2px;
+                position: absolute;
+                cursor: pointer;
+                background: url("../images/plus.png") no-repeat center;
+                color:red;
+              }
+              .dsui-past-transaction-minusicon{
+                height:16px;
+                width:16px;
+                margin-top: 2px;
+                position: absolute;
+                cursor: pointer;
+                background: url("../images/minus.png") no-repeat center;
+                color:blue;
+              }
+            }
+            .dsui-past-transactions .dsui-table-head{
+              font-size : 1.3em;
+            }
+          }
+          .dci-payment-client-info{
+            .dci-pay-for{
+              color:$dark-gray-color;
+              margin-bottom: 10px;
+            }
+            .dsui-info{
+              color:$dark-slate-gray-color;
+            }
+            .dsui-info-section{
+              margin-top:18px;
+              .popover-content{
+                font-size: 13px;
+                color:$dark-gray-color;
+                  line-height: 15px;
+                  padding-right: 7px;
+              }
+              .dsui-info-text{
+                text-decoration: none;
+                color:$dark-gray-color;
+              }
+              .dsui-pay-more-info{
+                color: $deep-sky-blue-color !important;
+              }
+            }
+          }   
+        }
+        /* end of select-payment-method-section css */
+      
+        /* past-transactions-sections css*/
+       .dci-pay-past-transactions{
+         font-family:'Roboto reg';
+          background: $gray-bg-color;
+          padding-top: 15px;
+          position: absolute;
+          margin-top: -10px;
+          z-index: 9999;
+          width: 80.7%;
+          left: 11.9px;
+           color:$dark-gray-color;
+         padding-left: 39px !important;
+           padding-right: 39px !important;
+         /* padding: 20px 80px;*/
+          .label-see-more{
+            cursor: pointer;
+            color:$dark-slate-gray-color;
+            font-family: $roboto-reg ;
+            font-size: 12px;
+            margin-right: 20px;
+          }
+          .dci-pay-transaction-table{
+            margin-bottom: 0px !important;
+            thead{
+              td{
+                 font-size: 12px !important;
+                 border-bottom: 1px solid #b3b3b3 !important;
+               }
+            }
+            tbody{
+              td{
+                vertical-align: middle !important;
+             /* border-bottom:1px solid $light-gray-color !important;*/
+                }
+            }
+          }
+
+          .label-see-more:hover,{
+            color:$light-gray-color;
+            .dci-pay-seemore-glyphicon{
+            color:$light-gray-color;
+          }
+          }
+         
+          /*.dci-pay-seemore-glyphicon:hover{
+            color:$light-gray-color;
+          }*/
+          .dci-pay-seemore-glyphicon{
+               margin-top: 18px;
+              position: absolute;
+              right: 40px;
+              color:$dark-slate-gray-color;
+          }
+          .dci-pay-pasttransaction-table-heading{
+            color:$dark-slate-gray-color;
+            font-size: 40px;
+            font-family: $roboto-light;
+            margin-bottom: 8px;
+          }
+
+        }
+        .dci-pay-past-transactions:before{
+          position: absolute;
+          top: -15px;
+          left: 255px;
+          display: inline-block;
+          border-right: 14px solid transparent;
+          border-bottom: 14px solid $light-gray-color;
+          border-left: 14px solid transparent;
+          border-bottom-color: $light-gray-color;
+          content: '';
+       
+         /* border-color: 14px solid red transparent !important;*/
+        }
+        .dci-pay-past-transactions:after{
+          position: absolute;
+           top: -15px;
+          left: 255px;
+          display: inline-block;
+          border-right: 14px solid transparent;
+          border-bottom: 15px solid $gray-bg-color;
+          border-left: 14px solid transparent;
+          border-bottom-color:$gray-bg-color;
+          content: '';
+         /* border-color: 14px solid red transparent !important;*/
+        }
+
+        /* end of past-transactions-sections css*/
+
+        /* All past transactions section css */
+        .dci-allPastTransactions{
+          .dsui-allpasttransactions-table-scroll{
+            max-height: 240px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+          }
+          .past-transaction-back-label{
+            color: #1f3f55;
+            line-height: 20px;
+            margin-left: 2px;
+            cursor: pointer;
+            font-family: $roboto-reg;
+
+          }
+          .dci-backtopayment-glyphicon{
+            top: 2px;
+            color: $dark-slate-gray-color;
+          }
+           font-family:$roboto-reg;
+          .table{
+             /* border:1px solid $dark-gray-color !important;*/
+              thead:first-child > tr:first-child{
+                 border-bottom:0 !important;
+                  color:$dark-gray-color;
+                  font-size: 12px;
+                /*  padding-bottom: 20px;*/
+              } 
+              thead:first-child > tr:first-child > td:last-child{
+                 font-family: $roboto-reg;
+                  color:$dark-slate-gray-color !important;
+                 
+              } 
+
+            tbody{
+            /*  border:1px solid $dark-gray-color !important;*/
+              tr:first-child{
+                td{
+                  border-top: 1px solid $dark-gray-color !important;
+
+                }
+              }
+              td{
+              /*  border-bottom: 1px solid $dark-gray-color !important;*/
+                vertical-align: middle !important;
+                color: $dark-gray-color;
+
+              }
+              .transaction-values{
+                color:$black-color;
+              }
+            }
+          }
+          a:hover{
+            text-decoration: none;
+          }
+          .back-icon{
+            color: $black-color;
+          }
+          .back-icon:hover{
+            color: $black-color;
+          }
+          .dsui-pay-print-button{
+            background: $dark-slate-gray-color;
+            color: white;
+            font-family: $roboto-reg;
+            margin-left: 38px;
+            width: 92px;
+            height: 34px;
+            border: none;
+
+          }
+          .dsui-pay-print-button:hover{
+               background:  $gray-bg-color;
+               color:$dark-slate-gray-color;
+            }
+        }
+
+        /* End of All past transactions section css */
+      
+        /* select payment options section css*/
+
+        .dci-select-payment-method{
+          .dsui-pay-card-icon-div,
+          .dsui-pay-phone-icon-div,
+          .dsui-pay-paypal-icon-div{
+            padding-top: 30px;          
+            font-size: 12px;
+            color:$white-color;
+            background: $dark-slate-gray-color;
+            border-right: 1px solid $white-color;
+            border-bottom: 1px solid $white-color;
+            height:148px;
+            .dsui-pay-card-icon{
+              background: url("../images/cc.png") no-repeat center;
+              height:42px;
+              width: 100%;
+
+            }
+            .dci-pay-card-select{
+                width: 133px;
+                height: 28px;
+              }
+              .dci-pay-dropdown-design{
+                min-width: 133px !important;
+                top: 0% !important;
+                font-size: 13px;
+                .dci-pay-addnewcard{
+                  padding-left:16px; 
+                }
+              }
+            .dsui-pay-phone-icon{
+              background: url("../images/mobile.png") no-repeat center;
+              height:57px;
+              width: 100%;
+              margin-top: -5px;
+            }
+            .dsui-pay-paypal-icon{
+              background: url("../images/pp.png") no-repeat center;
+              height:42px;
+              width: 100%;
+              margin-top: 0px;
+            }
+          }
+          .dsui-pay-card-icon-div:hover{
+            background: $gray-bg-color;
+            color: $dark-slate-gray-color;
+            cursor: pointer;
+            .dsui-pay-card-icon{
+              background: url("../images/cc_blue.png") no-repeat center;
+            }
+          }
+          .dsui-pay-phone-icon-div:hover{
+            color: $dark-slate-gray-color;
+            background: $gray-bg-color;
+            cursor: pointer;
+            .dsui-pay-phone-icon{
+              background: url("../images/mobile_blue.png") no-repeat center;
+            }
+          }
+          .dsui-pay-paypal-icon-div:hover{
+            color: $dark-slate-gray-color;
+            background: $gray-bg-color;
+            cursor: pointer;
+            .dsui-pay-paypal-icon{
+              background: url("../images/pp_blue.png") no-repeat center;
+            }
+          }
+        }
+
+        /* End of select payment options section css*/
+
+        /* Card detais section css*/
+        .dsui-card-payment-submit{
+          .dsui-submit-header{
+            font-size: 3em;
+            color: $dark-slate-gray-color;
+            font-family: $roboto-light;
+             margin-top: 30px;
+             margin-bottom: 25px;
+          }
+          .dsui-submit-details{
+            min-height: 13em;
+            .dsui-card-details{
+              .dsui-card-layout{
+                height: 13em;
+                background-color: $dark-slate-gray-color;
+                border-radius: 5px;
+                padding: 1em;
+                input[type="text"],input[type="password"]{
+                  width: 100%;
+                  margin:0;
+                  padding: 5px;
+                  background-color: transparent;
+                  border: 1px solid $white-color;
+                  color: $white-color;
+                }
+                ::-webkit-input-placeholder {
+                  font-size: 1em;
+                  color: $white-color; 
+                }
+                ::-moz-placeholder {
+                  font-size: 1em;
+                  color: $white-color; 
+                } /* firefox 19+ */
+                :-ms-input-placeholder {
+                  font-size: 1em;
+                  color: $white-color;
+                } /* ie */
+                input:-moz-placeholder {
+                  font-size: 1em;
+                  color: $white-color; 
+                }
+                .dsui-cvv-content{
+                  padding-top: 0.3em;
+                }
+                .dsui-card-number-content{
+                  padding-top: 0.3em;
+                  .dsui-card-number-section{
+                    padding: 0 1em 0 0 ;
+                  }
+                }
+                .dsui-holder-name-expiry-content{
+                  padding-top: 0.3em;
+                }
+              }
+            }
+            .dsui-address-details{
+              input[type="text"]{
+                  width: 100%;
+                  margin-bottom:0.3em;
+                  padding: 5px;
+                  background-color: transparent;
+                  border: 1px solid $pastel-gray-color;
+                  font-size: 14px;
+              }
+              ::-webkit-input-placeholder {
+                color: $pastel-gray-color;
+              }
+              ::-moz-placeholder {
+                color: $pastel-gray-color;
+              } /* firefox 19+ */
+              :-ms-input-placeholder {
+                color: $pastel-gray-color;
+              } /* ie */
+              input:-moz-placeholder {
+                color: $pastel-gray-color;
+              }
+              .dsui-address-layout{
+                .dsui-billing-address-one{
+                  .dsui-address-one{
+                  }
+                }
+                .dsui-billing-address-two{
+                  .dsui-address-two{
+
+                  }
+                }
+                .dsui-billing-city{
+                  .dsui-city{
+
+                  }
+                }
+                .dsui-state-group{
+                  width: 100%;
+                  .dsui-state{
+                    width: 30% !important;
+                  }
+                  .dsui-zip-code{
+                    width: 70% !important;
+                  }
+                  input:last-of-type {
+                    border-left: 0; 
+                  }
+                }
+                .dsui-area-group{
+                  width: 100%;
+                  .dsui-area{
+                    width: 30% !important;
+                  }
+                  .dsui-phone-number{
+                    width: 70% !important;
+                  }
+                  input:last-of-type {
+                    border-left: 0; 
+                  }
+                }
+                .dsui-radio-section{
+                  .dsui-radio-text {
+                    font-size: 0.8em;
+                    color: #CDCFD0;
+                     label{
+                         color: #CDCFD0;
+                         font-weight:normal !important;
+                         font-size:14px;
+                    }
+                  }
+                  .dsui-radio-bisect{
+
+                    border-right: 1px solid $dark-gray-color;
+                  }
+                  .dsui-save-future-info{
+                    .popover{
+                      width:130px;
+                    }
+                  }
+                }            
+              }
+            }
+            .approval-options{
+              button{
+                border-radius:0 !important;
+              }
+              .close-button {
+                background-color: $button-gray-backgroud;
+                color: $approval-close-button;
+               /* padding:0px 0px;*/
+              }
+              .print-button {
+                background-color:$button-pay;
+                border-color:$button-pay;
+                color: $white-color;
+              }
+              .print-button-invalid {
+                background-color:$button-pay-invalid;
+                border-color:$button-pay-invalid;
+                color: $white-color;
+              }
+            }
+          }
+        }
+        /* Card detais section css*/
+
+        /* Mobile Payment Verification Section CSS*/
+        .dci-pay-mobile-verification{
+          .mobile-label{
+            color:$gray-label-mobile;
+            font-size: 22px;
+            font-family: 'Roboto reg'; 
+            margin-bottom: 0px;         
+          }
+          .verify-info-mobile{
+            color:$dark-slate-gray-color;
+            font-size: 16.1px;
+            font-family: 'Roboto light';  
+            margin-bottom: 31px;
+            margin-top: 15px;   
+          }
+          .phone-number-field{
+            input{
+              padding:10px 5px;
+              height:41px;
+              color: $pastel-gray-color;
+              font-family: 'Roboto reg';
+              font-size: 18px;
+            }
+            margin-bottom: 40px;
+            left: 30px;
+            position: relative;
+          }
+          .remember-number-field{
+            font-size: 0.8em;
+            margin-bottom: 20px;
+          }
+          .approval-options{
+            margin-bottom: 20px;
+            button{
+              border-radius:0 !important;
+            }
+            .close-button {
+              background-color: $button-gray-backgroud;
+              color: $approval-close-button;
+            }
+            
+           
+            .print-button {
+              background-color:$button-pay;
+              border-color:$button-pay;
+              color: $white-color;
+            }
+            .print-button-invalid {
+              background-color:$button-pay-invalid;
+              border-color:$button-pay-invalid;
+              color: $white-color;
+            }
+          }
+          .dci-pay-i-agree{
+              font-family:$roboto-reg;
+              font-size: 12px ;
+              color: $security-label-color;
+              padding: 10px 0px;
+              a{
+                color:$security-label-color;
+                text-decoration: underline;
+              }
+            }
+        }  
+        /* End of Mobile Payment Verification Section CSS*/
+        
+        /* Pin Verification Section CSS*/  
+        .dci-pay-pin-verification{
+          .pin-label{
+            color:$gray-label-mobile;
+            font-size: 22px;
+            font-family: 'Roboto reg';  
+          }
+          .verify-info-pin{
+            color:$dark-slate-gray-color;
+            font-size: 18px;
+            font-family: $roboto-light;  
+            margin-bottom:31px;
+            margin-top: 15px;
+          }
+          .phone-number-field{
+            input{
+              padding:10px 5px;
+              /*height:30px;*/
+              color: $pastel-gray-color;
+              font-family: 'Roboto reg';
+              font-size: 18px;
+              width: 141px;
+            }
+            margin-bottom:20px;
+          }
+          .remember-number-field{
+            font-size: 0.8em;
+            margin-bottom: 20px;
+          }
+
+          .approval-options{
+            margin-bottom: 20px;
+            button{
+              border-radius:0 !important;
+            }
+            .close-button {
+              background-color: $button-gray-backgroud;
+              color: $approval-close-button;
+            }
+            .print-button {
+              background-color:$button-pay;
+              border-color:$button-pay;
+              color: $white-color;
+            }
+           
+            .print-button-invalid {
+              background-color:$button-pay-invalid;
+              border-color:$button-pay-invalid;
+              color: $white-color;
+            }
+            .dci-pay-i-agree{
+              font-family:$roboto-reg;
+              font-size: 12px ;
+              color: $security-label-color;
+              padding: 10px 0px;
+              a{
+                color:$security-label-color;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+
+
+        /* End of Pin Verification Section CSS*/   
+
+        /* Approval Section CSS*/
+        .dci-pay-approval-section{
+          .approval-header{
+            color:$header-green;
+            font-size: 40px;
+            font-family: $roboto-light;
+            margin-top: 12px;
+          }
+          .approval-message{
+            font-weight: 100 !important;
+            font-size: 14px;
+            padding: 15px 0px;
+            color: $dark-gray-color;
+          }
+          .approval-options{
+            button{
+              border-radius:0 !important;
+            }
+            .close-button {
+              background-color: $button-gray-backgroud;
+              color: $approval-close-button;
+            }
+            .print-button {
+              background-color:$button-pay;
+              border-color:$button-pay;
+              color: $white-color;
+            }
+            .print-button-invalid {
+              background-color:$button-pay-invalid;
+              border-color:$button-pay-invalid;
+              color: $white-color;
+            }
+          }
+        }
+        /* End of Approval Section CSS*/
+
+        /* Common Label for two Sections */
+        .past-trasaction-label{
+          color:$dark-slate-gray-color;
+         line-height: 20px;
+          margin-left: 10px;
+          cursor: pointer;
+          font-family: $roboto-reg;
+        }
+        .dsui-payment-select-txt{
+          font-size:40px;
+          color : $dark-slate-gray-color;
+          font-family: $roboto-light;
+          margin-bottom: 30px;
+          margin-top: 25px;
+        }
+
+        .dsui-info-text{
+          text-decoration: none;
+          color:$dark-gray-color;
+        }
+        .secure-payment-label{
+          padding:10px;
+          color: $security-label-color;
+          font-family:'Roboto reg';
+          font-size:12px;
+          text-align: center;
+        }
+
+        /*Not Used*/
+        .dsui-submit-payment{
+          font-size: 2.4em;
+          margin-bottom: 30px;
+        }        
+        .dsui-plus-icon{
+          border: 1px solid $dark-gray-color;
+          height: 21px;
+          width: 23px;
+          padding: 2px;
+        }
+        /*End of Common Labels*/
+        .dci-pay-order-duedate-client{
+          margin-bottom: 15px;
+          margin-top: 5px;
+        }
+        .dci-pay-order-duedate-client-bottom{
+          margin-bottom:5px;
+        }
+        .dci-i-icon{
+                  top:12px !important;
+        }
+        
+
+
+      }
+    }
+  }
+  .dsui-footer{ 
+
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+  .dsui{
+    .dsui-header{
+    }
+    .dsui-content{
+    }
+    .dsui-footer{
+    }
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 992px) {
+  .dsui{
+    .dsui-header{
+    }
+    .dsui-content{
+      
+    }
+    .dsui-footer{
+    }
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .dsui{
+    .dsui-header{
+    }
+    .dsui-content{
+    }
+    .dsui-footer{
+
+    }
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .dsui{
+    .dsui-header{
+    }
+    .dsui-content{
+    }
+    .dsui-footer{
+    }
+  }
+}
