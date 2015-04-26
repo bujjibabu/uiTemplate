@@ -8,8 +8,8 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('HomeCtrl', function ($scope) {
-    $scope.myInterval = 5000;
+  .controller('HomeCtrl', function ($scope,$http) {
+    $scope.myInterval = 2000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
 	    var newWidth = 600 + slides.length + 1;
@@ -22,4 +22,24 @@ angular.module('testApp')
 	  for (var i=0; i<4; i++) {
 	    $scope.addSlide();
 	  }
+
+	  //get thumbnail data
+
+	  $http.get('data/homethumbnails.json').
+	    success(function(data, status, headers, config) {
+	      $scope.thumbnailsData = data;
+	    }).
+	    error(function(data, status, headers, config) {
+	      console.log('unable to get data');
+	    });
+
+// Most recent
+	     $http.get('data/mostRecent.json').
+	    success(function(data, status, headers, config) {
+	      $scope.mostRecent = data;
+	    }).
+	    error(function(data, status, headers, config) {
+	      console.log('unable to get data');
+	    });
+
   });
