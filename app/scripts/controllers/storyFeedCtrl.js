@@ -8,6 +8,6 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('storyFeedCtrl', function ($scope) {
+  .controller('storyFeedCtrl', function () {
     
   });

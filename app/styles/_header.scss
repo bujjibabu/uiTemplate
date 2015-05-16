@@ -59,6 +59,16 @@
 			ul li a:hover, ul li a:active{
 				text-decoration: none !important;
 			}
+			.bb-header-menu-hover-content{
+				  position: absolute;
+				  top: 65px;
+				  width: 100%;
+				  background: $headermenu-background;
+				  border: 1px solid $headermenu-background;
+				  z-index: 999;
+				  color: $white-color ;
+				  
+			}
 		}
 	}
 	.bb-content{

@@ -8,6 +8,6 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('SubmitCtrl', function ($scope) {
+  .controller('SubmitCtrl', function () {
     
   });

@@ -19,10 +19,10 @@
         <input type="search" class="col-sm-12 bb-search text-center" placeholder="Enter Search keyword"/>
       </div>
     </div>
-	<div class="bb-header-section-2">
+	<div class="bb-header-section-2 clearfix">
 		<div class="text-center"><img src="images/Web-header-try4.png"></div>
 	</div>
-	<div class="bb-header-menu-items">
+	<div class="bb-header-menu-items col-sm-12 paading-zero" data-ng-mouseenter ="showMainMenuContent=true;" data-ng-mouseleave ="showMainMenuContent=false;">
 		<ul class="text-center">
 	      <li ng-class="getClass('/home')"><a href="#/home">HOME</a></li>
 	      <li ng-class="getClass('/news')"><a href="#/news">NEWS</a></li>
@@ -32,5 +32,11 @@
 	      <li ng-class="getClass('/events')"><a href="#/events">EVENTS</a></li>
 	      <li ng-class="getClass('/contactus')"><a href="#/contactus">CONTACT US</a></li>
 	    </ul>
+	    <div class="bb-header-menu-hover-content" data-ng-show="showMainMenuContent" >
+	    	<div class="col-sm-3 paading-zero" data-ng-repeat ="item in mainItems">
+  				<img src="{{item.img}}" class="img-responsive col-sm-12">
+	    		<p data-ng-bind="item.content" class="text-center"></p>
+	    	</div>
+	    </div>
 	</div>
 </div>

@@ -8,6 +8,6 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('ContactCtrl', function ($scope) {
+  .controller('ContactCtrl', function () {
     
   });

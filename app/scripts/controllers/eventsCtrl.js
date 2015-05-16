@@ -8,6 +8,6 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('EventsCtrl', function ($scope) {
+  .controller('EventsCtrl', function () {
     
   });
