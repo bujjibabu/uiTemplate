@@ -8,6 +8,11 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('MystoryCtrl', function () {
-    
-  });
+    .controller('MystoryCtrl', function() {
+
+
+       
+
+
+
+    });
