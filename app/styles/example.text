@@ -1,0 +1,6 @@
+//var userObj = {name:'bujji',mobile:9533068603};
+var name = "bujjibabu"
+
+localstorage.setItem('name',name);
+localstorage.getItem('name');
+

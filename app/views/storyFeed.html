@@ -1,1 +1,16 @@
-<div>Story feed </div><div>Story feed </div><div>Story feed </div><div>Story feed </div><div>Story feed </div><div>Story feed </div>
+<div class="bb-mystory">
+    <div class="col-sm-12 bb-content">
+        <h1 class="bb-title">My Story</h1>
+        <div>
+            <span class="bb-sub-title">Home to those amazing #MyStory posts!</span>
+        </div>
+        <p class="clearfix" />
+        <div class="col-sm-8">
+            <div class="col-sm-6" data-ng-repeat="obj in storyFeed">
+            <img src="{{obj.imgurl}}" class="img-responsive" />
+            <h3><a class="bb-title-text" href="#" title="{{obj.title}}" data-ng-bind="obj.title"></a></h3>
+            </div>
+        </div>
+        <p class="clearfix" />
+    </div>
+</div>
