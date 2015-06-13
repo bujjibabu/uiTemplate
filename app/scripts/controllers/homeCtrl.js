@@ -24,7 +24,6 @@ angular.module('testApp')
 	  }
 
 	  //get thumbnail data
-
 	  $http.get('data/homethumbnails.json').
 	    success(function(data/*, status, headers, config*/) {
 	      $scope.thumbnailsData = data;
@@ -33,7 +32,7 @@ angular.module('testApp')
 	      console.log('unable to get data');
 	    });
 
-// Most recent
+		// Most recent
 	     $http.get('data/mostRecent.json').
 	    success(function(data/*, status, headers, config*/) {
 	      $scope.mostRecent = data;
@@ -41,5 +40,10 @@ angular.module('testApp')
 	    error(function(/*data, status, headers, config*/) {
 	      console.log('unable to get data');
 	    });
+
+	    //load more photos
+	    $scope.fnLoadMore = function(){
+	    	//ajax  call here
+	    };
 
   });
