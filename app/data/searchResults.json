@@ -1,0 +1,25 @@
+{"results":
+	{
+		"data":[
+			{
+			    "image":"images/search1.jpg",
+			    "info":"This search shows the exploitation of Mountains"
+		    },{
+		        "image":"images/search3.jpg",
+		        "info":"This search shows how water color changes with waste"
+		    },{
+		        "image":"images/search4.jpg",
+		        "info":"This search shows the seashore fisheries and sea-side life"
+		    },{
+		        "image":"images/search5.jpg",
+		        "info":"This search shows the beauty of naturality"
+		    },{
+		        "image":"images/image1.jpg",
+		        "info":"This search shows the e-technological changes"
+		    },{
+		        "image":"images/image3.jpg",
+		        "info":"Smoking is injurous to health"
+		    }
+		]
+	}
+}

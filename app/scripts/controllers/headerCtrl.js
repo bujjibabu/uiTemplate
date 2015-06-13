@@ -8,7 +8,7 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-    .controller('headerCtrl', function($scope, $location) {
+    .controller('headerCtrl', function($scope, $location,searchService) {
         $scope.showMainMenuContent = false;
         $scope.getClass = function(path) {
             if ($location.path().substr(0, path.length) === path) {
@@ -17,6 +17,31 @@ angular.module('testApp')
                 return '';
             }
         };
+        $scope.header={searchItems:[],showLoader:false,searchTempItems:[],searchText:""};
+        
+        // search Results Object
+
+        $scope.fnGetSearchJSON=function(){
+            searchService.getSearchResults('data/searchResults.json').then(function(result){
+                if(!result.error){
+                    $scope.header.searchTempItems = result.data;
+                }
+              });
+        };
+        /*Funtion to get Search Results*/
+        $scope.fnGetSearchResults=function(){
+            $scope.header.searchItems=[];
+            $scope.header.showLoader=true;
+            for (var i = 0; i < $scope.header.searchTempItems.length; i++) {
+                if($scope.header.searchTempItems[i].info.indexOf($scope.header.searchText)>-1){
+                    $scope.header.searchItems.push($scope.header.searchTempItems[i]);
+                }
+            }
+            $scope.header.showLoader=false;
+        };
+        
+        $scope.fnGetSearchJSON();
+
         $scope.mainItems = [{
             'content': 'It is a series of super bails and super acquittals. First film star Salman Khan then political stalwart Jaya Lalitha and today business tycoon Ramalinga  Raju getting their biggest judicial relief of life.',
             'img': 'images/image1.jpg'
@@ -30,6 +55,7 @@ angular.module('testApp')
             'content': 'From stock market rigging to smuggling of factory machines, Reliance fought pitched battles with investigative agencies in Mumbai courts and won each of the case one by one.',
             'img': 'images/image1.jpg'
         }];
+
 
         $(window).scroll(function() {
             var a = 112;

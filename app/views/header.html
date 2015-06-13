@@ -16,8 +16,29 @@
 	</div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        <input type="search" class="col-sm-12 bb-search text-center" placeholder="Enter Search keyword"/>
+        <input type="search" data-ng-model="header.searchText" class="col-sm-12 bb-search text-center" id="searchInput" placeholder="Search here" data-ng-change="fnGetSearchResults()"/>
+        <span data-ng-show="header.showLoader" class="search-loader"><img src="images/loader.gif"></span>
       </div>
+    </div>
+    <div data-ng-show="header.searchText.length>0" class="col-sm-12 bb-header-results-wrapper">
+	    <div class="row bb-header-results" data-ng-show="header.searchItems.length > 0">
+		    <div class="col-sm-12 list-section">
+		    	<div data-ng-repeat="items in header.searchItems" class="col-sm-3">	
+		    		<div class="row">
+		    			<img ng-src="{{items.image}}" class="col-sm-12"/>
+			    		<div class="col-sm-12">
+			    			<h5 class="topic-info"><span data-ng-bind="items.info"></span></h5>
+			    		</div>
+		    		</div>	    		
+		    	</div>
+		    </div>
+		    <div class="col-xs-12 text-center show-more-label">
+		    	MORE ITEMS
+		    </div>
+	    </div>
+	    <div class="row zero-results-section" data-ng-show="header.searchItems.length == 0">
+	    	<div class="col-xs-12 text-center zero-results-label"> 0 RESULTS</div>
+	    </div>
     </div>
 	<div class="bb-header-section-2 clearfix">
 		<div class="text-center"><img src="images/Web-header-try4.png"></div>
