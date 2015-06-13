@@ -1,0 +1,47 @@
+.bb-mystory {
+    .bb-header {}
+    .bb-content {
+        .bb-details{
+            .bb-title{
+                color:red;
+            }
+        }
+    }
+}
+/**/
+/* Large desktop */
+
+@media (min-width: 1200px) {
+    .mystory {
+        .bb-header {}
+        .bb-content {}
+        .bb-footer {}
+    }
+}
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .mystory {
+        .bb-header {}
+        .bb-content {}
+        .bb-footer {}
+    }
+}
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    .mystory {
+        .bb-header {}
+        .bb-content {}
+        .bb-footer {}
+    }
+}
+/* Landscape phones and down */
+
+@media (max-width: 480px) {
+    .mystory {
+        .bb-header {}
+        .bb-content {}
+        .bb-footer {}
+    }
+}
