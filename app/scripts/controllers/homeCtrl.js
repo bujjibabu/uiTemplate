@@ -8,7 +8,7 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('HomeCtrl', function ($scope,$http) {
+  .controller('HomeCtrl', function ($scope,$http,$location) {
     $scope.myInterval = 2000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
@@ -40,10 +40,11 @@ angular.module('testApp')
 	    error(function(/*data, status, headers, config*/) {
 	      console.log('unable to get data');
 	    });
-
 	    //load more photos
 	    $scope.fnLoadMore = function(){
 	    	//ajax  call here
 	    };
-
+	   $scope.fnDeatils = function(){
+	   	$location.path('/details')
+	   }
   });

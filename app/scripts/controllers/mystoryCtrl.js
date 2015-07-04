@@ -8,7 +8,7 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-    .controller('MystoryCtrl', function($scope,$http) {
+    .controller('MystoryCtrl', function($scope,$http,$location) {
 
        $http.get('data/mystory.json').
 	    success(function(data/*, status, headers, config*/) {
@@ -18,6 +18,9 @@ angular.module('testApp')
 	      console.log('unable to get data');
 	    });
 
+	    $scope.fnDeatils = function(){
+	   		$location.path('/details')
+	  	 }
 	    //pagination
 
     });

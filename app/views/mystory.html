@@ -6,7 +6,7 @@
         </div>
         <p class="clearfix" />
         <div class="col-sm-8">
-            <div class="col-sm-6" data-ng-repeat="obj in mystoryData">
+            <div class="col-sm-6" data-ng-repeat="obj in mystoryData" data-ng-click="fnDeatils()">
                 <img src="{{obj.imgurl}}" class="img-responsive" />
                 <h3><a class="bb-title-text" href="#" title="{{obj.title}}" data-ng-bind="obj.title"></a></h3>
             </div>

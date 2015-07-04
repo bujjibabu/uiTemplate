@@ -40,7 +40,7 @@
     <p class="clearfix"></p>
     <p class="clearfix"></p>
     <h4 class="text-uppercase text-center">Most Recent</h4>
-      <div class="col-sm-4" ng-repeat="obj in mostRecent" style="margin-bottom: 10px;">
+      <div class="col-sm-4" ng-repeat="obj in mostRecent" style="margin-bottom: 10px;" data-ng-click="fnDeatils(obj)">
         <img ng-src="{{obj.imgurl}}" class="img-responsive" style="width: 100%;"/>
         <h4 class="lable-title"><a data-ng-bind="obj.label"></a></h4>
         <l

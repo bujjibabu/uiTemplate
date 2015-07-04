@@ -1,5 +1,26 @@
 <div class="col-xs-12">
 	<div class="bb-details">
-		<h3 class="bb-title">Pending Approval From FSSAI, HUL Recalls Knorr Noodles {{details}}</h3>
+		<div class="col-xs-8">
+			<div class="detail-title clearfix" style="border: 1px dashed #c0c0c0;margin: 30px 0px;padding: 10px 5px;font-family: Sanchez;color: #4d4d4d;">
+				<h3 class="bb-title" data-ng-bind="detailsObj.title"></h3>
+				<div class="col-xs-6" style="padding:0px">
+					<span style="background: rgb(0, 172, 237); padding: 3px 15px;">News</span>
+				</div>
+				<div class="col-xs-6 text-right">
+					<span class=""></span><span>July 2, 2015 </span>
+					<span> | </span>
+					<span> 5 Cmment</span>
+				</div>
+			</div>
+			<div>
+				<img src="{{detailsObj.image}}">
+			</div>
+			<br/>
+			<span style="font-size:18px; font-family: 'PT Serif';line-height: 29px;text-align: justify;" ng-bind-html="detailsObj.text | nl2p"></span>
+			<br/>
+		</div>
+		<div class="col-xs-4">
+
+		</div>
 	</div>
 </div>
